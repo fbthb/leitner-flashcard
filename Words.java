@@ -12,7 +12,6 @@ public class Words implements Serializable {
 		this.boxnr = boxnr;
 		dateiname = ".box" + boxnr + ".txt";
 		words = new ArrayList<Word>();
-		words.add(new Word("Welt", "world"));
 	}
 	Words(ArrayList<Word> words, int boxnr, String dateiname) {
 		this.words = words;
