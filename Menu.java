@@ -1,6 +1,6 @@
 import java.awt.*;
-import java.awt.event.*;
 import java.io.*;
+import java.awt.event.*;
 
 public class Menu extends Frame implements ActionListener {
 
@@ -33,7 +33,7 @@ public class Menu extends Frame implements ActionListener {
 	
 	Label l6 = new Label();
 	Button tobox1 = new Button("in Box 1 schieben");
-	Button delete = new Button("löschen");
+	Button delete = new Button("l\u00f6schen");
 	
 	Button exit = new Button("beenden");
 	int[] cardnumber = new int[6];
@@ -62,7 +62,7 @@ public class Menu extends Frame implements ActionListener {
 		l3.setText("Box 3: Anzahl der Karten: " + cardnumber[2]);
 		l4.setText("Box 4: Anzahl der Karten: " + cardnumber[3]);
 		l5.setText("Box 5: Anzahl der Karten: " + cardnumber[4]);
-		l6.setText("Box 6: Anzahl der Karten: " + cardnumber[5] + " Was möchtest du damit tun?");
+		l6.setText("Box 6: Anzahl der Karten: " + cardnumber[5] + " Was m\u00f6chtest du damit tun?");
 		
 		// Aufbauen der neuen Seite
 		Panel box1 = new Panel();
@@ -202,7 +202,7 @@ public class Menu extends Frame implements ActionListener {
 		if (e.getActionCommand().equals(delete.getLabel())&&cardnumber[5]>=1){
 			File f = new File(".box6.txt");
 			f.delete();
-			l6.setText("Karten wurden gelöscht");
+			l6.setText("Karten wurden gel\u00f6scht");
 		}
 		
 		if (e.getActionCommand().equals(exit.getLabel())){
