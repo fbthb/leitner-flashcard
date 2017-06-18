@@ -15,7 +15,7 @@ public class WordFrame extends Frame implements ActionListener {
 	Label wordtotranslate = new Label();
 	Label infolabel = new Label();
 	TextField inputbox = new TextField(50);
-	Button check = new Button("prüfen");
+	Button check = new Button("pr\u00fcfen");
 	Button nextWord = new Button("weiter");
 	Button exit = new Button("beenden");
 	Words w; //Words aktuell
@@ -35,12 +35,12 @@ public class WordFrame extends Frame implements ActionListener {
 		else thismethod = nextmethod;
 	
 		if (thismethod == 1) {
-			language.setText("Übersetze von deutsch auf englisch:");
+			language.setText("\u00dcbersetze von deutsch auf englisch:");
 			wordtotranslate.setText(w.getWordGer());
 			solution = w.getWordEng();
 		}
 		else {
-			language.setText("Übersetze von englisch auf deutsch");
+			language.setText("\u00dcbersetze von englisch auf deutsch");
 			wordtotranslate.setText(w.getWordEng());
 			solution = w.getWordGer();
 		}
@@ -83,7 +83,7 @@ public class WordFrame extends Frame implements ActionListener {
 			if (inputbox.getText().equals(solution)) {
 				solved = true;
 				infolabel.setBackground(Color.GREEN);
-				infolabel.setText("Die Lösung war richtig");
+				infolabel.setText("Die L\u00f6sung war richtig");
 						
 				wn = new Words(boxnr+1);
 				wn.load();
@@ -94,7 +94,7 @@ public class WordFrame extends Frame implements ActionListener {
 			}
 			else { 
 				infolabel.setBackground(Color.RED);
-				infolabel.setText("Die richtige Lösung wäre " + solution);
+				infolabel.setText("Die richtige L\u00f6sung w\u00e4re " + solution);
 				
 				w1 = new Words(1);
 				w1.load();
@@ -102,6 +102,9 @@ public class WordFrame extends Frame implements ActionListener {
 				w1.save(w1.words);
 				w.deleteFirst();
 				w.save(w.words);
+				if (inputbox.getText().equals("42")) {
+					infolabel.setText("Diese universelle Antwort gilt nur für die Frage nach dem Leben, dem Universum und dem ganzen Rest.");
+				}
 			}
 		}
 		if (e.getActionCommand().equals(nextWord.getLabel())){
@@ -111,19 +114,19 @@ public class WordFrame extends Frame implements ActionListener {
 				}
 				else {
 					infolabel.setBackground(Color.ORANGE);
-					infolabel.setText("Keine weiteren Wörter in dieser Box");
+					infolabel.setText("Keine weiteren W\u00f6rter in dieser Box");
 				}
 			}
 			else {
 				infolabel.setBackground(Color.ORANGE);
-				infolabel.setText("Erst lösen!\n");
+				infolabel.setText("Erst l\u00f6sen!\n");
 			}
 		}
 		if (e.getActionCommand().equals(exit.getLabel())){
 			if (solved) new Menu();
 			else {
 				infolabel.setBackground(Color.ORANGE);
-				infolabel.setText("Erst lösen!\n");
+				infolabel.setText("Erst l\u00f6sen!\n");
 			}
 		}
 		
