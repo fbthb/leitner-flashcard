@@ -79,9 +79,9 @@ public class WordFrame extends Frame implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals(check.getLabel())){
+		if (e.getActionCommand().equals(check.getLabel())&&!solved){
+			solved = true;
 			if (inputbox.getText().equals(solution)) {
-				solved = true;
 				infolabel.setBackground(Color.GREEN);
 				infolabel.setText("Die L\u00f6sung war richtig");
 						
@@ -100,7 +100,7 @@ public class WordFrame extends Frame implements ActionListener {
 				w1.load();
 				w1.addWord(new Word(w.getWordGer(), w.getWordEng()));
 				w1.save(w1.words);
-				w.deleteFirst();
+				if (!(!hasnext&&boxnr==1)) w.deleteFirst();
 				w.save(w.words);
 				if (inputbox.getText().equals("42")) {
 					infolabel.setText("Diese universelle Antwort gilt nur für die Frage nach dem Leben, dem Universum und dem ganzen Rest.");
