@@ -50,30 +50,35 @@ public class AddWords extends Frame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals(nextWord.getLabel())){
-			Words w = new Words(1);
-			w.load();
-			w.addWord(new Word(inputgerman.getText(), inputenglish.getText()));
-			w.save(w.words);
-			new AddWords();
+			if (inputgerman.getText().isEmpty()||inputenglish.getText().isEmpty()) {
+				explain.setText("Fehler. Bitte beide Felder ausf\u00fcllen");
+			}
+			else {
+				Words w = new Words(1);
+				w.load();
+				w.addWord(new Word(inputgerman.getText(), inputenglish.getText()));
+				w.save(w.words);
+				new AddWords();
+			}
 		}
 		if (e.getActionCommand().equals(importlist.getLabel())){
 			Words w = new Words(1);
 			w.load();
-			w.addWord(new Word("haben", "have"));
-			w.addWord(new Word("kaufen", "buy"));
-			w.addWord(new Word("vergessen", "forget"));
-			w.addWord(new Word("geben", "give"));
-			w.addWord(new Word("behalten", "keep"));
-			w.addWord(new Word("verlassen", "leave"));
-			w.addWord(new Word("sagen", "say"));
-			w.addWord(new Word("sehen", "see"));
-			w.addWord(new Word("sitzen", "sit"));
-			w.addWord(new Word("denken", "think"));
-			w.addWord(new Word("schreiben", "write"));
+			w.addWord(new Word("haben", "to have"));
+			w.addWord(new Word("kaufen", "to buy"));
+			w.addWord(new Word("vergessen", "to forget"));
+			w.addWord(new Word("geben", "to give"));
+			w.addWord(new Word("behalten", "to keep"));
+			w.addWord(new Word("verlassen", "to leave"));
+			w.addWord(new Word("sagen", "to say"));
+			w.addWord(new Word("sehen", "to see"));
+			w.addWord(new Word("sitzen", "to sit"));
+			w.addWord(new Word("denken", "to think"));
+			w.addWord(new Word("schreiben", "to write"));
 			w.addWord(new Word("Jahr", "year"));
-			w.addWord(new Word("erinnern", "remember"));
-			w.addWord(new Word("tragen", "wear"));
-			w.addWord(new Word("lernen", "learn"));
+			w.addWord(new Word("erinnern", "to remember"));
+			w.addWord(new Word("tragen", "to wear"));
+			w.addWord(new Word("lernen", "to learn"));
 			w.addWord(new Word("Brief", "letter"));
 			w.addWord(new Word("Musik", "music"));
 			w.addWord(new Word("Kunst", "art"));
@@ -84,11 +89,11 @@ public class AddWords extends Frame implements ActionListener {
 			w.addWord(new Word("gestern", "yesterday"));
 			w.addWord(new Word("Wasser", "water"));
 			w.addWord(new Word("Eis", "ice"));
-			w.addWord(new Word("arbeiten", "work"));
+			w.addWord(new Word("arbeiten", "to work"));
 			w.addWord(new Word("Essen", "food"));
 			w.addWord(new Word("Flugzeug", "plane"));
 			w.addWord(new Word("Flughafen", "airport"));
-			w.addWord(new Word("schreiben", "write"));
+			w.addWord(new Word("schreiben", "to write"));
 			w.addWord(new Word("Spiel", "game"));
 			w.addWord(new Word("Kopf", "head"));
 			w.addWord(new Word("Liste", "list"));
