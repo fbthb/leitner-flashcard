@@ -103,9 +103,12 @@ public class WordFrame extends Frame implements ActionListener {
 				if (!(!hasnext&&boxnr==1)) w.deleteFirst();
 				w.save(w.words);
 				if (inputbox.getText().equals("42")) {
-					infolabel.setText("Diese universelle Antwort gilt nur für die Frage nach dem Leben, dem Universum und dem ganzen Rest.");
+					infolabel.setText("Diese universelle Antwort gilt nur f\u00fcr die Frage nach dem Leben, dem Universum und dem ganzen Rest.");
 				}
 			}
+		}
+		if (e.getActionCommand().equals(check.getLabel())&&solved){
+			infolabel.setText("eine nachtr\u00e4gliche \u00c4nderung der L\u00f6sung ist nicht m\u00f6glich");
 		}
 		if (e.getActionCommand().equals(nextWord.getLabel())){
 			if (solved) {
