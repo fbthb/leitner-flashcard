@@ -13,6 +13,7 @@ public class AddWords extends Frame implements ActionListener {
 	Button nextWord = new Button("weiter");
 	Button exit = new Button("beenden");
 	Button importlist = new Button("Beispiel-Liste einf\u00fcgen");
+	boolean inputlist = false;
 	
 	AddWords() {
 	
@@ -61,7 +62,9 @@ public class AddWords extends Frame implements ActionListener {
 				new AddWords();
 			}
 		}
-		if (e.getActionCommand().equals(importlist.getLabel())){
+		if (e.getActionCommand().equals(importlist.getLabel())&&(!inputlist)){
+			inputlist = true;
+			explain.setText("Vokabel-Liste wurde hinzugef\00fcgt.");
 			Words w = new Words(1);
 			w.load();
 			w.addWord(new Word("haben", "to have"));
@@ -105,7 +108,6 @@ public class AddWords extends Frame implements ActionListener {
 			w.addWord(new Word("Flasche", "bottle"));
 			w.addWord(new Word("Katze", "cat"));
 			w.save(w.words);
-			new AddWords();
 		}
 		if (e.getActionCommand().equals(exit.getLabel())){
 			new Start();
