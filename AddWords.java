@@ -64,7 +64,7 @@ public class AddWords extends Frame implements ActionListener {
 		}
 		if (e.getActionCommand().equals(importlist.getLabel())&&(!inputlist)){
 			inputlist = true;
-			explain.setText("Vokabel-Liste wurde hinzugef\00fcgt.");
+			explain.setText("Vokabel-Liste wurde hinzugef\u00fcgt.");
 			Words w = new Words(1);
 			w.load();
 			w.addWord(new Word("haben", "to have"));
