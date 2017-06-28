@@ -2,7 +2,7 @@ import java.io.*;
 
 public class Word implements Serializable {
 
-	private static final long serialVersionUID = 5503401113122008964L;
+	private static final long serialVersionUID = 1L;
 	String ger;
 	String eng;
 	
