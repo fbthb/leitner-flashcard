@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Words implements Serializable {
 	
-	private static final long serialVersionUID = -2384720448482101519L;
+	private static final long serialVersionUID = 1L;
 	ArrayList<Word> words;
 	int boxnr;
 	String dateiname;
