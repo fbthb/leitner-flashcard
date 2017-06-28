@@ -35,7 +35,7 @@ public class Menu extends Frame implements ActionListener {
 	Button tobox1 = new Button("in Box 1 schieben");
 	Button delete = new Button("l\u00f6schen");
 	
-	Button exit = new Button("beenden");
+	Button exit = new Button("zur\u00fcck ins Hauptmen\u00f");
 	int[] cardnumber = new int[6];
 	Menu() {
 		//Löschen der vorherigen Seite
