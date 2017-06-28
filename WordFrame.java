@@ -103,7 +103,8 @@ public class WordFrame extends Frame implements ActionListener {
 				w1.load();
 				w1.addWord(new Word(w.getWordGer(), w.getWordEng()));
 				w1.save(w1.words);
-				if (!(!hasnext&&boxnr==1)) w.deleteFirst();
+				if (boxnr!=1) w.deleteFirst();
+				//if (!(!hasnext&&boxnr==1)) w.deleteFirst();
 				w.save(w.words);
 				if (inputbox.getText().equals("42")) {
 					infolabel.setText("Diese universelle Antwort gilt nur f\u00fcr die Frage nach dem Leben, dem Universum und dem ganzen Rest.");
