@@ -3,10 +3,10 @@ import java.awt.event.*;
 
 public class Start extends Frame implements ActionListener {
 
-	private static final long serialVersionUID = -7386866212593898954L;
+	private static final long serialVersionUID = 1L;
 	Button learn = new Button("lernen");
-	Button addWords = new Button("Vokabeln hinzufügen");
-	Label l = new Label("Was möchtest du tun?");
+	Button addWords = new Button("Vokabeln hinzuf\u00fcgen");
+	Label l = new Label("Was m\u00f6chtest du tun?");
 	
 	Start() {
 		Main.frame.remove(0);
