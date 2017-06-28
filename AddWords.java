@@ -10,9 +10,9 @@ public class AddWords extends Frame implements ActionListener {
 	Label english = new Label("englisch");
 	TextField inputgerman = new TextField(50);
 	TextField inputenglish = new TextField(50);
-	Button nextWord = new Button("weiter");
-	Button exit = new Button("beenden");
-	Button importlist = new Button("Beispiel-Liste einf\u00fcgen");
+	Button nextWord = new Button("weiteres Vokabel-Paar");
+	Button exit = new Button("zur\u00fcck ins Hauptmen\u00fc");
+	Button importlist = new Button("Standard-Liste einf\u00fcgen");
 	boolean inputlist = false;
 	
 	AddWords() {
