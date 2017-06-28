@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class Menu extends Frame implements ActionListener {
 
-	private static final long serialVersionUID = -7386866212593898954L;
+	private static final long serialVersionUID = 1L;
 	// Erstellen der Elemente
 	Label l1 = new Label();
 	Button deen1 = new Button("DE->EN 1 lernen");
